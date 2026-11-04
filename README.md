@@ -127,7 +127,7 @@ The agent includes a **mandatory safety validator** that runs before every query
 - `ALTER` / `CREATE` — cannot change schema
 - `GRANT` / `REVOKE` — cannot change permissions
 
-**Only `SELECT` queries (and `WITH … SELECT` CTEs) are allowed.** The validator checks every query regardless of how it was generated — even if the LLM attempts a dangerous operation, the validator blocks it before it reaches the database.
+**Only `SELECT` queries (and `WITH … SELECT` CTEs) are allowed, plus `EXPLAIN` as a first word for read-only queries (for example `EXPLAIN SELECT` and `EXPLAIN ANALYZE SELECT`).** `EXPLAIN ANALYZE` with a write statement (for example `EXPLAIN ANALYZE DELETE`) is still blocked by the blocked-keyword check before it reaches the database. The validator checks every query regardless of how it was generated — even if the LLM attempts a dangerous operation, the validator blocks it before it reaches the database.
 
 ---
 
