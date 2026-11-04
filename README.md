@@ -8,9 +8,7 @@
 
 A **LangChain-powered agent** that converts natural language questions into SQL queries, executes them safely against your database, and explains results in plain English. Uses **Ollama** (free, local LLM) by default with OpenAI as an optional fallback.
 
-> **Resume bullet:** Built Text-to-SQL agent using LangChain + Ollama converting natural language to SQL with safety guardrails — enabling non-technical users to query databases with 92% accuracy
 
-![Demo Screenshot](https://via.placeholder.com/900x500?text=Text-to-SQL+Agent+Demo)
 
 ---
 
@@ -47,7 +45,7 @@ Works immediately with the bundled SQLite sample database — no PostgreSQL need
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/YOUR_USERNAME/text-to-sql-agent.git
+git clone https://github.com/Revanthpotu/text-to-sql-agent.git
 cd text-to-sql-agent
 
 # 2. Create a virtual environment
